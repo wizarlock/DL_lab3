@@ -9,7 +9,7 @@ import tensorflow as tf
 import tensorflow.keras.backend as K
 from utils import *
 from glob import glob
-from parser import parser
+from parser1 import parser
 from TrackNet import ResNet_Track
 from focal_loss import BinaryFocalLoss
 from collections import deque

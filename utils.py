@@ -186,7 +186,7 @@ def confusion(y_pred, y_true, tol):
             FN += 1
         elif np.amax(h_pred)>0 and np.amax(h_true)>0:
             # find center of ball for prediction
-            _, contours, _ = cv2.findContours(h_pred[0].copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            contours, _ = cv2.findContours(h_pred[0].copy(), cv2.RETR_EXTERNAL)
             bboxes = [cv2.boundingRect(cnt) for cnt in contours]
 
             areas = np.array([bbox[2] * bbox[3] for bbox in bboxes])

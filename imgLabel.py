@@ -1,7 +1,7 @@
 import os
 import cv2
 import sys, getopt
-from parser import parser
+from parser1 import parser
 from utils import save_info, load_info, go2frame, show_image
 
 args = parser.parse_args()
